@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+
+	<order_type order_type_id="1002" name="Lab test" description="An order by a clinician for a laboratory test" creator="1" date_created="2008-08-15 13:50:14.0" retired="false" uuid="8ab58c6f-0d07-4a80-bb60-895639c1e66e" />
+
+</dataset>
