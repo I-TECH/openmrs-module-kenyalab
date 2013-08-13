@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * Patient lab tests fragment controller
  */
-public class PatientLabTestsFragmentController {
+public class PatientPendingTestsFragmentController {
 
 	public void controller(@FragmentParam("patient") Patient patient, FragmentModel model) {
 

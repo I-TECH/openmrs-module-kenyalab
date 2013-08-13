@@ -14,18 +14,29 @@
 
 package org.openmrs.module.kenyalab;
 
+import org.openmrs.Concept;
+import org.openmrs.module.kenyautil.MetadataUtils;
+
 /**
- * Constants used by KenyaLAB
+ * Lab test definition
  */
-public class LabConstants {
+public class LabTestDefinition {
+
+	private String conceptIdentifier;
 
 	/**
-	 * Module ID
+	 * Constructs a lab test definition
+	 * @param conceptIdentifier the concept identifier
 	 */
-	public static final String MODULE_ID = "kenyalab";
+	public LabTestDefinition(String conceptIdentifier)  {
+		this.conceptIdentifier = conceptIdentifier;
+	}
 
 	/**
-	 * App IDs
+	 * Gets the concept
+	 * @return the concept
 	 */
-	public static final String APP_LABENTRY = MODULE_ID + ".labEntry";
+	public Concept getConcept() {
+		return MetadataUtils.getConcept(conceptIdentifier);
+	}
 }

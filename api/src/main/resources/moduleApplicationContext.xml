@@ -4,6 +4,16 @@
 		xsi:schemaLocation="http://www.springframework.org/schema/beans
 			http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+	<!-- ===================== App descriptors ===================== -->
+
+	<bean id="kenyalab.app.labentry" class="org.openmrs.module.appframework.SimpleAppDescriptor">
+		<property name="id" value="kenyaemr.labEntry" />
+		<property name="label" value="Lab Entry" />
+		<property name="homepageUrl" value="kenyalab/labentry/labEntryHome.page" />
+		<property name="iconUrl" value="kenyalab:apps/labentry.png" />
+		<property name="order" value="450" />
+	</bean>
+
 	<!-- Module services -->
 
 	<bean id="kenyaLaboratoryService" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">

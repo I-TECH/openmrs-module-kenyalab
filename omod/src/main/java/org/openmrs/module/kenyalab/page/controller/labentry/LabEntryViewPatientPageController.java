@@ -12,20 +12,17 @@
  * Copyright (C) OpenMRS, LLC.  All Rights Reserved.
  */
 
-package org.openmrs.module.kenyalab;
+package org.openmrs.module.kenyalab.page.controller.labentry;
+
+import org.openmrs.module.kenyalab.LabConstants;
+import org.openmrs.module.kenyaui.annotation.AppPage;
 
 /**
- * Constants used by KenyaLAB
+ * Lab entry home page
  */
-public class LabConstants {
+@AppPage(LabConstants.APP_LABENTRY)
+public class LabEntryViewPatientPageController {
 
-	/**
-	 * Module ID
-	 */
-	public static final String MODULE_ID = "kenyalab";
-
-	/**
-	 * App IDs
-	 */
-	public static final String APP_LABENTRY = MODULE_ID + ".labEntry";
+	public void controller() {
+	}
 }
