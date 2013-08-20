@@ -15,6 +15,7 @@
 package org.openmrs.module.kenyalab;
 
 import org.openmrs.Concept;
+import org.openmrs.Form;
 import org.openmrs.Obs;
 import org.openmrs.Order;
 import org.openmrs.Patient;
@@ -103,6 +104,14 @@ public class LabTest implements Comparable<LabTest> {
 	}
 
 	/**
+	 * Convenience method to get the ordered date of the test
+	 * @return the ordered date
+	 */
+	public Date getOrderedDate() {
+		return hasOrder() ? order.getOrderer().getDateCreated() : null;
+	}
+
+	/**
 	 * Convenience method to get the concept of the test
 	 * @return the concept
 	 */
@@ -116,6 +125,33 @@ public class LabTest implements Comparable<LabTest> {
 	 */
 	public Patient getPatient() {
 		return hasOrder() ? order.getPatient() : (Patient) result.getPerson();
+	}
+
+	/**
+	 * Convenience method to determine if test is urgent
+	 * @return true if test is urgent
+	 */
+	public boolean isUrgent() {
+		return hasOrder() ? Order.Urgency.STAT.equals(order.getUrgency()) : false;
+	}
+
+	/**
+	 * Convenience method to get the source form of the test result
+	 * @return the form or null
+	 */
+	public Form getSourceForm() {
+		if (hasResult() && result.getEncounter() != null) {
+			return result.getEncounter().getForm();
+		}
+		return null;
+	}
+
+	/**
+	 * Convenience method to get the performed date of the test result
+	 * @return the ordered date
+	 */
+	public Date getPerformedDate() {
+		return hasResult() ? result.getObsDatetime() : null;
 	}
 
 	/**

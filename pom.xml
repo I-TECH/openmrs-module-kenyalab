@@ -37,8 +37,8 @@
 
 		<!-- Module dependencies -->
 		<appframeworkVersion>1.5</appframeworkVersion>
-		<kenyautilVersion>0.2.3</kenyautilVersion>
-		<kenyauiVersion>1.8</kenyauiVersion>
+		<kenyacoreVersion>0.7</kenyacoreVersion>
+		<kenyauiVersion>1.9.2</kenyauiVersion>
 		<uiframeworkVersion>2.6</uiframeworkVersion>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -58,23 +58,23 @@
 
 			<dependency>
 				<groupId>org.openmrs.module</groupId>
+				<artifactId>kenyacore-api</artifactId>
+				<version>${kenyacoreVersion}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
+				<artifactId>kenyacore-test</artifactId>
+				<version>${kenyacoreVersion}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.openmrs.module</groupId>
 				<artifactId>kenyaui-api</artifactId>
 				<version>${kenyauiVersion}</version>
 				<scope>provided</scope>
-			</dependency>
-
-			<dependency>
-				<groupId>org.openmrs.module</groupId>
-				<artifactId>kenyautil-api</artifactId>
-				<version>${kenyautilVersion}</version>
-				<scope>provided</scope>
-			</dependency>
-
-			<dependency>
-				<groupId>org.openmrs.module</groupId>
-				<artifactId>kenyautil-test</artifactId>
-				<version>${kenyautilVersion}</version>
-				<scope>test</scope>
 			</dependency>
 
 			<dependency>

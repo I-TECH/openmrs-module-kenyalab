@@ -23,12 +23,12 @@
 
 		<dependency>
 			<groupId>org.openmrs.module</groupId>
-			<artifactId>kenyautil-api</artifactId>
+			<artifactId>kenyacore-api</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>org.openmrs.module</groupId>
-			<artifactId>kenyautil-test</artifactId>
+			<artifactId>kenyacore-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 

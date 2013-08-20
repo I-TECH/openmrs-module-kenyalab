@@ -21,17 +21,29 @@ import org.openmrs.module.kenyalab.api.LaboratoryService;
 import org.openmrs.ui.framework.annotation.FragmentParam;
 import org.openmrs.ui.framework.fragment.FragmentModel;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Patient lab tests fragment controller
  */
-public class PatientPendingTestsFragmentController {
+public class PatientLabTestsFragmentController {
 
 	public void controller(@FragmentParam("patient") Patient patient, FragmentModel model) {
 
-		List<LabTest> tests = Context.getService(LaboratoryService.class).getLabTestsByPatient(patient);
+		List<LabTest> completedTests = new ArrayList<LabTest>();
+		List<LabTest> pendingTests = new ArrayList<LabTest>();
 
-		model.put("tests", tests);
+		for (LabTest labTest : Context.getService(LaboratoryService.class).getLabTestsByPatient(patient)) {
+			if (labTest.hasResult()) {
+				completedTests.add(labTest);
+			}
+			else {
+				pendingTests.add(labTest);
+			}
+		}
+
+		model.put("completedTests", completedTests);
+		model.put("pendingTests", pendingTests);
 	}
 }

@@ -21,7 +21,7 @@ import org.openmrs.Patient;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.kenyalab.LabMetadata;
 import org.openmrs.module.kenyalab.api.LaboratoryService;
-import org.openmrs.module.kenyautil.test.TestUtils;
+import org.openmrs.module.kenyacore.test.TestUtils;
 import org.openmrs.test.BaseModuleContextSensitiveTest;
 import org.springframework.beans.factory.annotation.Autowired;
 

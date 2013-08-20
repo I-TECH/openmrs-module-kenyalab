@@ -1,4 +1,4 @@
-KenyaLAB OpenMRS Module
+KenyaLab OpenMRS Module
 ===========================
 
-TODO
+Lab test management for KenyaEMR
