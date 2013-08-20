@@ -8,8 +8,8 @@
 
 <% if (datatype.numeric) { %>
 	${ ui.format(obs.valueNumeric) }${ ui.format(concept.units) }
-<% } else if (datatype.isText) { %>
+<% } else if (datatype.text) { %>
 	${ ui.format(obs.valueText) }
-<% } else if (datatype.isCoded) { %>
+<% } else if (datatype.coded) { %>
 	${ ui.format(obs.valueCoded) }
 <% } %>
